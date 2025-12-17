@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock & Mineral ID</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Rock & Mineral ID</h1>
+            <p>Test your geology knowledge!</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="category-filter">Filter by Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <!-- Options populated by JS -->
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="game-mode">Game Mode:</label>
+                <select id="game-mode">
+                    <option value="easy">Easy (Guess Name w/ Category)</option>
+                    <option value="hard">Hard (Guess Name)</option>
+                    <option value="category">Training (Guess Category)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card-area">
+            <div id="question-text">Identify this specimen!</div>
+
+            <div class="image-container">
+                <img id="rock-image" src="" alt="Rock Image">
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Enter mineral name..." autocomplete="off">
+                <br>
+                <div class="buttons">
+                    <button id="submit-button">Submit Guess</button>
+                    <button id="hint-button">Hint</button>
+                    <button id="reveal-button">Reveal Answer</button>
+                </div>
+            </div>
+
+            <div id="feedback-area"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

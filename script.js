@@ -114,9 +114,9 @@ function checkAnswer() {
         }
     } else {
         // Checking Name (Easy or Hard)
-        const normalizedName = (currentRock.common_name || "").toLowerCase().replace(/\s+/g, ' ');
+        const correctNames = (currentRock.common_name || "").split(',').map(name => name.trim().toLowerCase().replace(/\s+/g, ' '));
 
-        if (normalizedGuess === normalizedName) {
+        if (correctNames.includes(normalizedGuess)) {
             isCorrect = true;
         }
     }
